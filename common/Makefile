@@ -59,7 +59,6 @@ SHARED_FLAGS := \
 	-I$(SRC_DIR)/third_party/gemmlowp \
 	-I$(SRC_DIR)/third_party/flatbuffers/include \
 	-I$(SRC_DIR)/third_party/ruy \
-	-I$(SRC_DIR)/third_party/kissfft \
 	-I$(SOC_SOFTWARE_DIR)/include \
 	-I$(SOC_SOFTWARE_DIR)/libc \
 	-I$(LIBC_DIR)/include \
@@ -204,3 +203,4 @@ $(OBJECTS): | $(MODEL_INCS) $(DATA_INCS)
 	$(QUIET) $(CC) -x assembler-with-cpp -c $< $(CFLAGS) -o $@ -MMD
 
 include $(call find_srcs,d)
+J
